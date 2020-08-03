@@ -25,17 +25,17 @@ var data = [];
             data.push(element);
 
         }
-
+        await page.click('[name="commit"]')
         // console.log(data);
         return data;
 
 
     }
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: false });
 
     console.log(await getProducts(url));
     // console.log(data)
-    await browser.close();
+    // await browser.close();
 })();
 
 
